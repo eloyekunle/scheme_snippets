@@ -1,0 +1,11 @@
+(define (compute-recursive x)
+  (cond ((< x 3) x)
+	(else (+ (compute-recursive (- x 1))
+		 (* 2 (compute-recursive (- x 2)))
+		 (* 3 (compute-recursive (- x 3)))))))
+
+(compute-recursive 0)
+(compute-recursive 1)
+(compute-recursive 2)
+(compute-recursive 3)
+(compute-recursive 26)
